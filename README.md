@@ -7,7 +7,7 @@
 
 <h2>Live Demo</h2>
 
-Check out the live project [here](my-todo-app-ujjwalshriv.netlify.app).
+Check out the live project [here](https://my-todo-app-ujjwalshriv.netlify.app/).
 
 For Use this Repo in your Local machine Fork this Repo and Run Cmd - nmp run dev.
 
