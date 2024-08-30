@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(../assets/giphy.webp);
+    color: #f0f0f0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.newItemEntry {
+    margin-bottom: 2rem;
+}
+
+.newItemEntry__form {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.newItemEntry__input {
+    width: calc(100% - 60px);
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+    outline: none;
+}
+
+.newItemEntry__input::placeholder {
+    color: #aaa;
+}
+
+.newItemEntry__button {
+    background-color: #4caf50;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.newItemEntry__button:hover,
+.newItemEntry__button:focus {
+    background-color: #45a049;
+    outline: none;
+}
+
+.listContainer {
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.listTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #444;
+}
+
+.listTitle__button {
+    background-color: #f44336;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.listTitle__button:hover,
+.listTitle__button:focus {
+    background-color: #e53935;
+    outline: none;
+}
+
+.listItems {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background-color: #3a3a3a;
+    border-radius: 8px;
+}
+
+.item > input[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    accent-color: #4caf50;
+    cursor: pointer;
+}
+
+.item > input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.item > label {
+    flex-grow: 1;
+    word-break: break-word;
+}
+
+.item > button {
+    background-color: transparent;
+    border: none;
+    color: #f44336;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.item > button:hover, 
+.item > button:focus {
+    color: #e53935;
+    outline: none;
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 2.5rem;
+    }
+
+    .newItemEntry__form {
+        gap: 1rem;
+    }
+
+    .newItemEntry__input {
+        padding: 1rem;
+    }
+
+    .newItemEntry__button {
+        padding: 0 1.5rem;
+    }
+}
